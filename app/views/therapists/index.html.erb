@@ -1,0 +1,10 @@
+<div class="container m-4">
+  <h1 class="text-3xl font-bold mb-6">Upcoming Therapists</h1>
+  <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+    <% if @therapists.any? %>
+      <%= render @therapists %>
+    <% else %>
+      <h1 class="text-1xl font-bold mb-6">No Available Therapist</h1>
+    <% end %>
+  </div>
+</div>

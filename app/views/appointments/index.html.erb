@@ -1,0 +1,23 @@
+<div class="container m-4">
+  <h1 class="text-3xl font-bold mb-6">Upcoming Appointments</h1>
+  <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+    <% if @appointments.any? %>
+      <% @appointments.each do |appointment| %>
+        <div class="bg-gray-100 rounded-lg shadow-lg p-6 mb-6">
+          <h2 class="text-xl font-semibold mb-2">Session Details</h2>
+          <div>
+            <strong>Start Time:</strong> <%= appointment.therapy_session.start_time.strftime('%Y/%m/%d, %H:%M %p') %>
+          </div>
+          <div>
+            <strong>End Time:</strong> <%= appointment.therapy_session.end_time.strftime('%Y/%m/%d, %H:%M %p') %>
+          </div>
+          <div>
+            <strong>Assigned Therapist: </strong> <%= appointment.therapist_name %>
+          </div>
+        </div>
+      <% end %>
+    <% else %>
+      <h1 class="text-1xl font-bold mb-6">No Available Sessions</h1>
+    <% end %>
+  </div>
+</dvi>

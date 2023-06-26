@@ -1,0 +1,11 @@
+<div class="container m-4">
+  <h1 class="text-3xl font-bold mb-6">Sessions</h1>
+  <h1 class="text-2xl font-bold mb-6">Therapist: <%= @therapist.name%></h1>
+  <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+    <% if @therapy_sessions.any? %>
+      <%= render @therapy_sessions %>
+    <% else %>
+      <h1 class="text-1xl font-bold mb-6">No Available Sessions</h1>
+    <% end %>
+  </div>
+</dvi>

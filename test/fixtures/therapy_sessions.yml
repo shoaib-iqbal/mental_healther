@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  therapist: one
+  start_time: 2023-06-22 19:57:38
+  end_time: 2023-06-22 19:57:38
+
+two:
+  therapist: two
+  start_time: 2023-06-22 19:57:38
+  end_time: 2023-06-22 19:57:38

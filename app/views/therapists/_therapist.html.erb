@@ -1,0 +1,13 @@
+<div class="bg-gray-100 rounded-lg shadow-lg p-6 mb-6 flex flex-col justify-between">
+  <div>
+    <div>
+      <h1 class="text-2xl text-blue-600 font-bold mb-4"><%= therapist.name %></h1>
+    </div>
+    <div>
+      <strong>Specialization:</strong> <%= therapist.specialization %>
+    </div>
+  </div>
+  <div class="mt-3 flex-grow">
+    <%= link_to "View Available Sessions", therapist_therapy_sessions_path(therapist), class: "bg-blue-500 p-2 text-white rounded-md py-2 px-4 hover:bg-blue-600 transition-colors" %>
+  </div>
+</div>

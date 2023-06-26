@@ -1,0 +1,15 @@
+<div class="bg-gray-100 rounded-lg shadow-lg p-6 mb-6">
+  <h2 class="text-xl font-semibold mb-2">Session Details</h2>
+  <div>
+    <strong>Start Time:</strong> <%= therapy_session.start_time.strftime('%Y/%m/%d, %H:%M %p') %>
+  </div>
+  <div>
+    <strong>End Time:</strong> <%= therapy_session.end_time.strftime('%Y/%m/%d, %H:%M %p') %>
+  </div>
+  <div class="mt-4">
+    <%= form_with(url: appointments_path, method: :post) do |form| %>
+      <%= hidden_field_tag :therapy_session_id, therapy_session.id%>
+      <%= form.submit "Book Session", class: "bg-blue-500 p-2 text-white rounded-md py-2 px-4 hover:bg-blue-600 transition-colors" %>
+    <% end %>
+  </div>
+</div>
